@@ -1,0 +1,26 @@
+* erros sintáticos (lexico deve tokenizar)
+numero _Fazalgo(numero Fazum, numero). * falta id depois do numero
+inicio                                              * faltou .
+   numero Lixo.
+   
+   Lixo = Fazum - Fazdois + NADA x. * operador x precisa de 2 operandos
+   elgio = Lixo + _Soma(20,30).     * elgio não permite ter função
+fim.
+
+inicio.
+  numero Variavel, Lixo.   * Não pode ter , aqui
+  numero Teste.
+  
+  Variavel = NADA.
+  
+  Teste = 45 x _Fazalgo (50, Variavel).
+  
+  se Teste maior NADA.
+  entao.
+  inicio.
+    Variavel = Teste igual Lixo. * Somente expressoes matematicas
+  fim.
+  * erro Faltou senao
+  
+  Variavel = Variavel + Nova + 3 - 5 x 2 / 2 + Teste.
+fim.

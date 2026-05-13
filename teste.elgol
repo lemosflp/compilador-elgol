@@ -1,0 +1,24 @@
+numero _Soma (numero A, numero B).
+inicio.
+  numero R.
+  R = A + B.
+  elgio = R.
+fim.
+
+inicio.
+  numero Variavel.
+  numero Teste.
+  numero Varx.
+
+  Variavel = NADA.
+  Teste = 45.
+  Varx = 15.
+
+  enquanto Varx diferente de Variavel.
+  entao.
+    Teste = Teste + _Soma(Varx, 5).
+    Varx = Varx - 1.
+  fim.
+
+  Variavel = Variavel + Teste.
+fim.

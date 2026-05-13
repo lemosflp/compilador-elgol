@@ -1,0 +1,20 @@
+* Linguagem Elgol
+* autor Elgio Schlemer
+* sem erros
+numero _Fazalgo (numero Fazum, numero Fazdois) .
+inicio .
+   numero Lixo .
+   
+   Lixo = Fazum x Fazdois + NADA .
+   elgio = Lixo .
+fim .
+
+* programa principal, fora de função
+inicio .
+  numero Variavel .
+  numero Teste .
+  
+  Variavel = NADA .
+  Teste = 45 x _Fazalgo (45, Variavel) .  
+  Variavel = Variavel + 3 - 5 x 2 / 2 + Teste .
+fim.

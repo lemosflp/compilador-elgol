@@ -1,0 +1,35 @@
+* exemplo 4
+numero _Fazalgo (inteiro Fazum, inteiro Fazdois).
+inicio.
+   numero Lixo.
+   numero Lixox.
+   
+   Lixo = Fazum x Fazdois + NADA.
+   Fazum = Lixox - Fazdois + 34 - NADA x 15 / 3 x 4 - 87 + Fazum.
+   elgio = Fazum.
+fim.
+
+inicio.
+  numero Variavel.
+  numero Teste.
+  numero Varx.
+  
+  Variavel = NADA. 
+  Variaval = Teste + Nada .
+  Teste = 45 x _Fazalgo (45, Variavel).
+  
+  Varx = _Fazalgo (Teste, NADA).   * Comentario aqui
+  
+  se Varx maior Variavel.
+  entao.
+  inicio.
+      Varx = Varx x _Fazalgo(Variavel, NADA).
+      Teste = 45.
+  fim.
+  senao.
+  inicio.
+      Varx = NADA.
+  fim.
+  
+  Variavel = Variavel + 3 - 5 x 2 / 2 + Teste.
+fim.

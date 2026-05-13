@@ -1,0 +1,9 @@
+{
+    "name": "compilador-elgol",
+    "version": "1.0.0",
+    "type": "commonjs",
+    "private": true,
+    "dependencies": {
+        "jison": "^0.4.18"
+    }
+}

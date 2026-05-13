@@ -1,0 +1,13 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Jison generated output
+elgol-parser.js
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/

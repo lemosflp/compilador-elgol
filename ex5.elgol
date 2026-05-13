@@ -1,0 +1,24 @@
+* Exemplo 5 - Muitos erros. Descubra-os
+numero _Fazalgo (inteiro Fazum, inteiro Fazdois, Numx).
+   numero Lixo.
+   numero Lixox.
+   
+   Lixo = Fazum x Fazdois + NADA.
+   Fazum = Lixox - Fazdois + 34 - NADA * 15 / 3 x 4 - 87 + Fazum.
+   elgio = Fazum + Lixox.
+fim.
+
+inicio.
+  numero Variavel.
+  numero Teste.
+  numero Varx.
+  numero _Teste.
+  
+  enquanto Varx diferente de Variavel.
+  entao.
+      Varx = Varx x _Fazalgo(Variavel, NADA).
+      Teste = 45.
+  fim.
+  
+  Variavel = Variavel + x 3 - 5 x 2 / 2 + Teste . * 45 + 
+fim.
