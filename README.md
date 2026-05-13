@@ -9,6 +9,7 @@
 ```powershell
 node -v
 npm -v
+```
 
 ## Instalação
 Na pasta do projeto:
