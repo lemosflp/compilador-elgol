@@ -3,11 +3,11 @@
 %%
 
 /* whitespace */
-[ \t]+                      /* skip */
+[ \t]+                       /* skip */
 \r\n|\r|\n                   /* skip */
 
 /* comentário Elgol: começa com * e vai até fim da linha */
-\*.*                         /* skip */
+\*.* /* skip */
 
 /* palavras reservadas */
 "inicio"                     return 'INICIO';
@@ -48,12 +48,13 @@
 "."                          return 'DOT';
 
 /* números: não pode começar com 0; e 0 sozinho é erro léxico */
-[1-9][0-9]*                  return 'INT';
+[1-9][0-9]* return 'INT';
 0                            return 'ERRO_LEXICO';
 
-/* INVALIDOS (para bater com o enunciado): letras+digitos nao podem formar token */
-_[A-Za-z]+[0-9]+             return 'ERRO_LEXICO'; /* ex: _Fazalgo2 */
-[A-Za-z]+[0-9]+              return 'ERRO_LEXICO'; /* ex: Faz2 */
+/* INVALIDOS: regras explícitas para invalidar letra+digito (Faz2, _Faz2, 2Faz) */
+_[A-Za-z0-9]*[0-9][A-Za-z0-9]* return 'ERRO_LEXICO'; /* ex: _Faz2, _2Faz */
+[A-Za-z]+[0-9][A-Za-z0-9]* return 'ERRO_LEXICO'; /* ex: Faz2, Fa2z */
+[0-9]+[A-Za-z_][A-Za-z0-9_]* return 'ERRO_LEXICO'; /* ex: 2Faz, 2_ */
 
 /* função: começa com _ e segue regra de ID */
 _[A-Z][A-Za-z]{2,}[a-z]      return 'FUNCAO';
