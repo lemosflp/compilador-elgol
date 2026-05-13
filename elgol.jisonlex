@@ -19,10 +19,10 @@
 "para"                       return 'PARA';
 
 "numero"                     return 'TIPO_NUMERO';
-"inteiro"                    return 'TIPO_INTEIRO';
 
 "elgio"                      return 'ELGIO';
 "NADA"                       return 'NADA';
+"NEG"                        return 'NEG';
 
 /* relacionais (textuais) */
 "maior"                      return 'MAIOR';
@@ -31,16 +31,15 @@
 "diferente"                  return 'DIFERENTE';
 "migual"                     return 'MIGUAL';
 "Migual"                     return 'MIGUALC';
-"de"                         return 'DE';
 
 /* operadores matemáticos e tokens simples */
 "EXP"                        return 'EXP';
 "x"                          return 'MULT';
+"%"                          return 'MOD';
 
 "="                          return 'ATRIB';
 "+"                          return 'PLUS';
 "-"                          return 'MINUS';
-"*"                          return 'STAR';
 "/"                          return 'SLASH';
 
 "("                          return 'LPAREN';
@@ -49,7 +48,6 @@
 "."                          return 'DOT';
 
 /* números: não pode começar com 0; e 0 sozinho é erro léxico */
-[1-9][0-9]*\.[0-9]+          return 'FLOAT';
 [1-9][0-9]*                  return 'INT';
 0                            return 'ERRO_LEXICO';
 
@@ -57,11 +55,11 @@
 _[A-Za-z]+[0-9]+             return 'ERRO_LEXICO'; /* ex: _Fazalgo2 */
 [A-Za-z]+[0-9]+              return 'ERRO_LEXICO'; /* ex: Faz2 */
 
-/* função: começa com _ e só letras */
-_[A-Za-z]+                   return 'FUNCAO';
+/* função: começa com _ e segue regra de ID */
+_[A-Z][A-Za-z]{2,}[a-z]      return 'FUNCAO';
 
-/* id (variável): só letras */
-[A-Za-z]+                    return 'ID';
+/* id (variável): começa com maiúscula, termina com minúscula, >=4 letras */
+[A-Z][A-Za-z]{2,}[a-z]       return 'ID';
 
 /* fim de arquivo */
 <<EOF>>                      return 'EOF';
