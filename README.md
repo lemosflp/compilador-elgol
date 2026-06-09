@@ -1,12 +1,11 @@
 # Compilador Elgol — Analisador Léxico (Jison)
 
 ## Requisitos
-- Windows
 - Node.js **v20.x** (recomendado)
 - npm
 
 ### Verificar versões
-```powershell
+```bash
 node -v
 npm -v
 ```
@@ -14,7 +13,7 @@ npm -v
 ## Instalação
 Na pasta do projeto:
 
-```powershell
+```bash
 npm install
 ```
 ## Como executar
@@ -22,32 +21,29 @@ npm install
 O projeto utiliza 2 arquivos:
 - elgol.jison (gramática mínima)
 - elgol.jisonlex (regras léxicas)
+- elgol-parser.js (parser já gerado e versionado no repositório)
 
-1. Gere o arquivo:
+1. Rodar o analisador léxico (imprime tokens)
 
-```powershell
-npx jison .\elgol.jison .\elgol.jisonlex -o .\elgol-parser.js -m commonjs
-```
-
-2. Confirme que foi criado:
-
-```powershell
-dir .\elgol-parser.js
-```
-
-3. Rodar o analisador léxico (imprime tokens)
-
-```powershell
-node .\lex-run.js .\teste.elgol
+```bash
+node ./lex-run.js ./teste.elgol
 ```
 Você vai ver tokens tipo: TIPO_NUMERO, FUNCAO, ID, INT, INICIO, FIM, DOT, etc.
 
+2. Rodar o analisador sintático
+
+```bash
+node ./parse-run.js ./teste.elgol
+```
+
+Se o arquivo estiver correto, o comando imprime `OK`. Se houver erro, ele informa a linha.
+
 Outros códigos para analisar:
 
-```powershell
-node .\lex-run.js .\ex1.elgol
-node .\lex-run.js .\ex2.elgol
-node .\lex-run.js .\ex3.elgol
-node .\lex-run.js .\ex4.elgol
-node .\lex-run.js .\ex5.elgol
+```bash
+node ./lex-run.js ./ex1.elgol
+node ./lex-run.js ./ex2.elgol
+node ./lex-run.js ./ex3.elgol
+node ./lex-run.js ./ex4.elgol
+node ./lex-run.js ./ex5.elgol
 ```
